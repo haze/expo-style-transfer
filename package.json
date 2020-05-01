@@ -6,7 +6,9 @@
   "license": "",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js --watch"
+    "test": "node ./node_modules/jest/bin/jest.js --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "preset": "jest-expo"
@@ -16,9 +18,11 @@
     "expo": "^20.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "https://github.com/expo/react-native/archive/sdk-20.0.0.tar.gz",
-    "react-navigation": "^1.0.0-beta.12"
+    "react-navigation": "^1.0.0-beta.12",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "jest-expo": "^20.0.0"
-  }
+  },
+  "snyk": true
 }
